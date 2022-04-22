@@ -1,6 +1,6 @@
 # cserver-lua-api
 
-Unofficial LUA api for CServer Lua plugin.
+Unofficial API documentation for the [CServer](https://github.com/igor725/cserver) [Lua plugin](https://github.com/igor725/cs-lua/blob/main/src/luaclient.c)
 
 ## MKDocs
 Please install MKDocs (follow [this](https://www.mkdocs.org/user-guide/installation/) guide) and then do ``mkdocs serve`` in the cserver-lua-api folder.
