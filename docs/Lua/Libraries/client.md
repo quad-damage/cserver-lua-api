@@ -49,4 +49,13 @@ Iterates through all clients, passing them to ``ITERATE_FUNCTION()``.
 client.newbot()
 ```
 
-This function does nothing as of 23/4/2022 at 02:13 GMT+3
+Returns a new Client object.
+
+Example:
+
+```lua
+bot_client = client.newbot()
+bot_client:gotoworld(world.getbyname('world'))
+bot_client:teleport(vector.float(1, 3, 3), angle(7, 0))
+bot_client:spawn()
+```

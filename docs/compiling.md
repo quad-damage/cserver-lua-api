@@ -43,7 +43,7 @@ There are a number of arguments which can be passed to the build script:
 | w0        | Disable all warnings.                                                 |
 | od        | Disable compiler optimizations.                                       |
 | san       | Add LLVM sanitizers.                                                  |
-| run       | Run the server after compilation(Windows Only)                        |
+| run       | Run the server after compilation                                      |
 | runsame   | Run the server after compilation in the same window (Windows Only)    |
 | noprompt  | Suppres zlib download prompt message (Windows Only)                   |
 | pb        | Build a plugin (More below)                                           |
