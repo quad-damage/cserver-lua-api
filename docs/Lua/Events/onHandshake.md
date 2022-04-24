@@ -2,6 +2,9 @@
 
 Fired on a handshake with a user.
 
+!!! note
+    Returning a World here will send the client to it.
+
 ## Usage
 
 ```lua

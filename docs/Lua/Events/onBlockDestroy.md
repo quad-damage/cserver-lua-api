@@ -2,6 +2,9 @@
 
 Fired when a client destroys a block.
 
+!!! note
+    Returning ``false`` here will disallow the client from destroying the block.
+
 ## Usage
 
 ```lua
