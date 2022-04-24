@@ -5,7 +5,7 @@ A client is a player or a bot.
 
 ## Functions 
 
-### client.getbyid
+### Client: client.getbyid
 
 ```lua 
 client.getbyid(int: CLIENT_ID)
@@ -13,7 +13,7 @@ client.getbyid(int: CLIENT_ID)
 
 Returns a Client object by its id.
 
-### client.getbyname
+### Client: client.getbyname
 
 ```lua 
 client.getbyname(string: CLIENT_NAME)
@@ -21,7 +21,7 @@ client.getbyname(string: CLIENT_NAME)
 
 Returns a Client object by its name.
 
-### client.getcount
+### int: client.getcount
 
 ```lua
 client.getcount(EClientState: CLIENT_STATE)
@@ -43,7 +43,7 @@ client.iterall(func: ITERATE_FUNCTION(Client: client))
 
 Iterates through all clients, passing them to ``ITERATE_FUNCTION()``. 
 
-### client.newbot
+### Client: client.newbot
 
 ```lua
 client.newbot()

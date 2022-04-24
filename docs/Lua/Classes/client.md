@@ -54,7 +54,7 @@ Returns the client's name.
 client:getskin()
 ```
 
--
+Returns the client's skin url.
 
 ### int: client:getgroup
 
@@ -62,7 +62,7 @@ client:getskin()
 client:getgroup()
 ```
 
--
+Returns the client's group ID.
 
 ### int: client:getheldblock
 
@@ -208,11 +208,11 @@ client:isinstate(EClientState: state)
 ```
 Returns whether or not the client is in a given EClientState.
 
-| Name                  | Description                   |
-|-----------------------|-------------------------------|
-| CLIENT_STATE_INITIAL  | Player just connected         |
-| CLIENT_STATE_MOTD     | Player is receiving the map   |
-| CLIENT_STATE_INGAME   | Player is in game             |
+| Index | Name                  | Description                   |
+|-------|-----------------------|-------------------------------|
+| 0     | CLIENT_STATE_INITIAL  | Player just connected         |
+| 1     | CLIENT_STATE_MOTD     | Player is receiving the map   |
+| 2     | CLIENT_STATE_INGAME   | Player is in game             |
 
 ### bool: client:isop
 
@@ -272,7 +272,7 @@ Requires ``client:update()`` afterwards.
 client:setweather(EWeather: weather)
 ```
 
-Sets the client's local weather
+Sets the client's local weather.
 
 | Index | Name                  |
 |-------|-----------------------|
@@ -292,7 +292,7 @@ Sets a client's EnvProp. For more information, please look at [CPE SetMapEnvProp
 | Index | Name                          |
 |-------|-------------------------------|
 |   0   | WORLD_PROP_SIDEBLOCK          |
-|   1   | WORLD_PROP_EDGEBLOCK          | 
+|   1   | WORLD_PROP_EDGEBLOCK          |
 |   2   | WORLD_PROP_EDGELEVEL          |
 |   3   | WORLD_PROP_CLOUDSLEVEL        |
 |   4   | WORLD_PROP_FOGDIST            |
@@ -432,6 +432,16 @@ client:setorderblock(int: blockId, int: slot)
 
 Allows the server to edit the block list. For more information, please look at [CPE InventoryOrder](https://wiki.vg/Classic_Protocol_Extension#InventoryOrder)
 
+### client:setskin
+
+```lua
+client:setskin(string: url)
+```
+
+Sets the client's skin. 
+
+Requires ``client:update()`` afterwards.
+
 ### client:settexpack
 
 ```lua
@@ -543,5 +553,21 @@ Kicks the client with a given reason.
 ```lua
 client:chat(string: message)
 ```
+```lua
+client:chat(EMsgType: type, string: message)
+```
 
 Sends a chat message to the client.
+
+| Index | Name                          |
+|-------|-------------------------------|
+| 0     | MESSAGE_TYPE_CHAT             |
+| 1     | MESSAGE_TYPE_STATUS1          |
+| 2     | MESSAGE_TYPE_STATUS2          |
+| 3     | MESSAGE_TYPE_STATUS3          |
+| 11    | MESSAGE_TYPE_BRIGHT1          |
+| 12    | MESSAGE_TYPE_BRIGHT2          |
+| 13    | MESSAGE_TYPE_BRIGHT3          |
+| 100   | MESSAGE_TYPE_ANNOUNCE         |
+| 101   | MESSAGE_TYPE_BIGANNOUNCE      |
+| 102   | MESSAGE_TYPE_SMALLANNOUNCE    |
