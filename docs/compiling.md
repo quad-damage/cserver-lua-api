@@ -11,12 +11,8 @@ For example, if you wanted the Lua plugin, you may use
 ```bash
 git clone https://github.com/igor725/cserver &&
 git clone https://github.com/igor725/cs-base &&
-git clone https://github.com/igor725/cs-lua &&
-git clone https://github.com/igor725/cs-survival
+git clone https://github.com/igor725/cs-lua 
 ```
-
-!!! note
-    Note that compiling the Lua plugin requires the existance of the survival plugin's source(You don't need to install it).
 
 If you ran the commands above, your folder structure should look like this:
 
@@ -24,7 +20,6 @@ If you ran the commands above, your folder structure should look like this:
 ./server_src        - Root folder
     cserver/        - Server source
     cs-lua/         - Lua plugin source
-    cs-survival/    - Survival plugin source
 ```
 
 ## Compiling

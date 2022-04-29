@@ -13,18 +13,15 @@ Returns the worlds's name.
 ### bool: world:getspawn
 
 ```lua
+world:getspawn()
+```
+
+```lua
 world:getspawn(Vector: position, Angle: rotation)
 ```
 
-Writes the world's spawn into ``position`` and ``rotation``.
+Returns or writes the world's spawn into ``position`` and ``rotation``.
 
-### Vector: world:getspawna
-
-```lua
-world:getspawna()
-```
-
-Returns the world's spawn.
 
 ### int: world:getoffset
 
@@ -36,21 +33,18 @@ Return's the 1D location of the block at ``ShortVector``.
 
 Equation: ``(((ShortVector.y) * World.Length + (ShortVector.z)) * World.Width + (ShortVector.x))``
 
-### bool: world:getdimensions
+### bool:           world:getdimensions
+### Short Vector:   world:getdimensions
 
 ```lua
 world:getdimensions(Vector: dimensions)
 ```
 
-Writes the world's dimensions into ``dimensions``.
-
-### Vector: world:getdimensionsa
-
 ```lua
-world:getdimensionsa()
+world:getdimensions()
 ```
 
-Returns the world's dimensions.
+Returns or writes the world's dimensions into ``dimensions``.
 
 ### int: world:getblock
 
@@ -60,21 +54,18 @@ world:getblock(Vector: pos)
 
 Returns the block at ``pos``.
 
-### bool: world:getenvcolor
+### bool:   world:getenvcolor
+### Color3: world:getenvcolor
 
 ```lua
 world:getenvcolor(EColor: colorType, Color3: color)
 ```
 
-Writes the world's ``colorType`` into ``color``.
-
-### Color3: world:getenvcolora
-
 ```lua
-world:getenvcolora(EColor: colorType)
+world:getenvcolor(EColor: colorType)
 ```
 
-Returns the world's ``colorType``.
+Returns or writes the world's ``colorType`` into ``color``.
 
 | Index | Name                  |
 |-------|-----------------------|
@@ -149,7 +140,7 @@ Returns whether or not is world is ready to be played on.
 world:isinmemory()
 ```
 
-Returns whether or not is world is in memory.
+Returns whether or not is world is "inmemory". If true, ``:load()`` and ``:save()`` calls will be ignored
 
 ### bool world:ismodified
 
@@ -294,7 +285,7 @@ Sets the world's default texture pack.
 world:setinmemory(bool: inMemory)
 ```
 
--
+Sets the world's "inmemory" flag. If true, ``:load()`` and ``:save()`` calls will be ignored
 
 ### world:setignoremod
 
@@ -302,7 +293,7 @@ world:setinmemory(bool: inMemory)
 world:setignoremod(bool: ignoreMod)
 ```
 
--
+If true, prevents the WORLD_FLAG_MODIFIED flag from being set. This means that ``:save()`` calls will be ignored.
 
 ## Functions
 

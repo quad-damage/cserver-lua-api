@@ -38,7 +38,11 @@ Returns the client's IP Address.
 client:getping()
 ```
 
-Returns the client's ping to the server.
+```lua
+client:getping(bool: average)
+```
+
+Returns the client's ping to the server. If passed argument is true, returns the client's average ping.
 
 ### string: client:getname
 
@@ -93,34 +97,27 @@ For example: ``ClassiCube 1.3.1``, ``Vanilla Client`` etc.
 ### bool: client:getposition
 
 ```lua
+client:getposition()
+```
+
+```lua
 client:getposition(Vector: position)
 ```
 
-Writes the client's position in the given vector.
-
-### Vector: client:getpositiona
-
-```lua
-client:getpositiona()
-```
-
-Returns the client's position.
+Returns or writes the client's position in the given vector.
 
 ### bool: client:getrotation
+
+```lua
+client:getrotation()
+```
 
 ```lua
 client:getrotation(Angle: angle)
 ```
 
-Writes the client's rotation in the given angle.
+Returns or writes the client's rotation in the given angle.
 
-### Angle: client:getrotationa
-
-```lua
-client:getrotationa()
-```
-
-Returns the client's rotation.
 
 ### float: client:getclickdist
 
@@ -151,6 +148,9 @@ client:getstandblock()
 ```
 
 Returns the block ID the client is standing on.
+
+!!! note
+    May return a value that does not correspond to the actual one.
 
 ### int: client:getmodel
 
@@ -256,10 +256,10 @@ Sets the client's group.
 
 Requires ``client:update()`` afterwards.
 
-### client:setrotation
+### client:setmdlrotation
 
 ```lua
-client:setrotation(short: X, short: Y, short: Z)
+client:setmdlrotation(short: X, short: Y, short: Z)
 ```
 
 Sets the client's model's rotation.
@@ -456,7 +456,23 @@ Sends the client a new texture pack to download and use.
 client:setvelocity(Vector: vel)
 ```
 
+```lua
+client:setvelocity(Vector: vel, byte: mode)
+```
+
 Applies velocity to a client.
+
+``:setvelocity`` modes:
+
+| Bitflag    | Description                          |
+|------------|--------------------------------------|
+| PVC_ADDALL | Adds to the velocity of the player   |
+| PVC_SETX   | Sets the player's X velocity         |
+| PVC_SETY   | Sets the player's Y velocity         |
+| PVC_SETZ   | Sets the player's Z velocity         |
+| PVC_SETALL | Sets the player's velocity           |
+
+Since these are bitflags, you can use bitwise operations to combine setting and adding.
 
 ## Functions
 
@@ -522,7 +538,7 @@ Sends a plugin message to the player.
 
 !!! warning
     This feature is ClassiCube exclusive.
-    I have yet to fully understand this feature of CC.
+    I have yet to fully understand this feature of CC. - Quad
 
 ### client:update
 
