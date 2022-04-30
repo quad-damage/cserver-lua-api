@@ -30,4 +30,4 @@ Sets the fields of an angle.
 angle:get()
 ```
 
-Returns the fields of the angle
+Returns the fields of the angle.

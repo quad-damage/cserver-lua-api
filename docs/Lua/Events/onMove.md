@@ -9,7 +9,7 @@ Fired when a client moves.
 ## Usage
 
 ```lua
-function onMove(client)
+function onMove(Client: clientObj)
     print(string.format("Client %s has moved!", client:getname()))
 end 
 ```

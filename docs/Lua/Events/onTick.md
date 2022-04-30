@@ -9,7 +9,7 @@ Fired every tick.
 ## Usage
 
 ```lua
-function onTick(delta)
+function onTick(int: delta)
     print(string.format("Took %s since last tick.", delta))
 end
 ```

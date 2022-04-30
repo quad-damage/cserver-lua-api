@@ -45,7 +45,7 @@ Registers an alias for an existant command.
 ### command.remove
 
 ```lua 
-command.remove(string: COMMAND_NAME)
+command.remove(string: commandName)
 ```
 
 Removes an existant command.

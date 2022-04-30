@@ -16,6 +16,7 @@ blockDefinition table structure:
 | Parameter     | Description                                                   |
 |---------------|---------------------------------------------------------------|
 | name          | String: The name of your block.                               |
+| fallback      | Int: ID of the fallback block(for vanilla clients).           |
 | extended      | Boolean: Whether or not the block is extended.                |
 | param         | Table: List of block parameters.                              |
 
@@ -114,10 +115,14 @@ block.fallbackfor(Number: blockId)
 
 Returns the fallback id for the block.
 
-### : block.bulk
+### BulkBlockUpdate: block.bulk
 
 ```lua
-block.bulk(...)
+block.bulk()
 ```
 
--
+```lua
+block.bulk([World: worldObj, bool: autoSend])
+```
+
+Creates a new BulkBlockUpdate object. If given, will automatically set the world and/or autoSend.

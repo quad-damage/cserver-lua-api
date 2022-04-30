@@ -9,7 +9,7 @@ Fired when the client sends a plugin message.
 ## Usage
 
 ```lua
-function onPluginMessage(Client: client, int: channel, string: message)
+function onPluginMessage(Client: clientObj, int: channel, string: message)
 
 end
 ```

@@ -8,7 +8,7 @@ Fired when a user's type changes.
 ## Usage
 
 ```lua
-function onUserTypeChange(client)
+function onUserTypeChange(Client: clientObj)
     client:chat(string.format("Your user type has changed OP: %s", client:isop()))
 end
 ```

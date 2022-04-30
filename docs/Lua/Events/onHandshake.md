@@ -8,7 +8,7 @@ Fired on a handshake with a user.
 ## Usage
 
 ```lua
-function onHandshake(client)
+function onHandshake(Client: clientObj)
     client:chat(string.format("Welcome to the server, %s", client:getname()))
 end
 ```

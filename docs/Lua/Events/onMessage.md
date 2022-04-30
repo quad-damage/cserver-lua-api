@@ -8,7 +8,7 @@ Fired when the client sends a message.
 ## Usage
 
 ```lua
-function onMessage(Client: client, EMsgType: type, string: message)
+function onMessage(Client: clientObj, EMsgType: type, string: message)
     print(string.format("Client %s has said \"%s\" in EMsgType %s", client:getname(), message, msgType))
 
     -- Protip: You can change the EMsgType here.

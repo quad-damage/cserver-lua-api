@@ -5,7 +5,7 @@ Fired when the weather in a world changes.
 ## Usage
 
 ```lua
-function onWeatherChange(world)
+function onWeatherChange(World: worldObj)
     local weather_types = {
         [0] = "Sun",
         [1] = "Rain",

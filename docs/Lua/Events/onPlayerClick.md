@@ -5,7 +5,7 @@ Fired every time the player clicks.
 ## Usage
 
 ```lua
-function onPlayerClick(client, playerClickEvent)
+function onPlayerClick(Client: clientObj, PlayerClickEvent: playerClickEvent)
     client:chat(string.format("You clicked at %s button %s", playerClickEvent.position, playerClickEvent.button))
 end
 ```
