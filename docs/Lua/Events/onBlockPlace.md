@@ -5,6 +5,8 @@ Fired when a client places a block.
 !!! note
     Returning ``false`` here will disallow the client from placing the block.
 
+    Returning a block id here will place it instead of the block the client tried to place.
+
 ## Usage
 
 ```lua
