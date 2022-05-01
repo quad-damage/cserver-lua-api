@@ -68,14 +68,10 @@ Returns the magnitude of the vector.
 ### vector:cross
 
 ```lua
-vector:cross(Vector: bVec)
+vector:cross(Vector: vec1, Vector: vec2)
 ```
 
-```lua
-vector:cross(Vector: bVec, Vector: dstVector)
-```
-
-Returns or writes the cross product of 2 vectors.
+Writes the cross product of 2 vectors.
 
 ### vector:set
 
@@ -124,3 +120,19 @@ vector:tofloat()
 ```
 
 Transforms a short vector into a float vector.
+
+### vector:min()
+
+```lua
+vector:min(Vector: vec1, Vector: vec2)
+```
+
+Writes a new vector with the smallest values from the 2 source vectors.
+
+### vector:max()
+
+```lua
+vector:max(Vector: vec1, Vector: vec2)
+```
+
+Writes a new vector with the biggest values from the 2 source vectors.
