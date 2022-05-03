@@ -17,7 +17,7 @@ end
 | angle     | Angle     | Angle the client had when clicked.                        |
 | position  | Vector    | Position of the block that was clicked or (-1, -1, -1)    |
 | target    | Client    | The player that was clicked on, or nil if none.           |
-| action    | int       | 0 = Pressed, 1 = Released                                 |
+| action    | bool      | True = Pressed, False = Released                          |
 | face      | int       | Face of the block that was clicked or 255.                |
 | button    | int       | Button which was used to click.                           |
 
